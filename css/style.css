@@ -1,37 +1,41 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
+  scroll-behavior: smooth;
   list-style: none;
   text-decoration: none;
 }
-
-:root{
-  --color-fondo:#78C1F3;
-  --color-card: #E3F6FF;
-  --color-primario: #A0BFE0;
-  --color-secundario: #7895CB;
+:root {
+  --color-fondo: #78c1f3;
+  --color-card: #e3f6ff;
+  --color-primario: #a0bfe0;
+  --color-secundario: #7895cb;
   --color-text: #ffffff;
   --color-text-2: #333;
-  --color-botones: #1A66CC;
+  --color-botones: #43aa9f;
 }
 
 body {
-  
-  max-width: 100%;
-  background-color: var(--color-fondo);
   padding: 80px 0 0;
+  /* background-color: var(--color-fondo); */
+  background-color: #111;
+  font-family: "Quicksand", sans-serif;
+}
+.header {
+  background-color: #222;
 }
 
-
 #searchContainer {
-  margin-bottom: 10px;
-  border-radius: 4px;
-  margin-left: 35%;
+  margin-top: 25px;
+  width: 100%;
+  text-align: center;
 }
 
 #searchInput {
-  padding: 5px;
+  padding: 8px 10px;
   font-size: 16px;
   width: 200px;
   border: none;
@@ -42,7 +46,7 @@ body {
 #searchButton {
   padding: 5px 10px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 4px;
@@ -62,20 +66,17 @@ body {
   padding: 10px;
 }
 
-
-
-
 .separador {
   font-weight: bold;
-  color: var(--color-text-2);
-  font-size: 28px;
-  margin-left: 34%;
+  color: var(--color-text);
+  font-size: 2rem;
+  text-align: center;
+  margin: 35px 0;
 }
-
 
 /*menu*/
 
-header{
+header {
   width: 100%;
   height: 80px;
   background: var(--color-secundario);
@@ -84,33 +85,33 @@ header{
   justify-content: space-between;
   padding: 0 100px;
   position: fixed;
-  top:0;
+  top: 0;
 }
 
-.logo{
+.logo {
   font-size: 28px;
   font-weight: bold;
-  color:var(--color-text);
+  color: var(--color-text);
 }
 
-.hambueger{
+.hambueger {
   display: none;
 }
-.nav-bar ul{
+.nav-bar ul {
   display: flex;
+  gap: 15px;
 }
 
 .nav-bar ul li a {
-  display: block;
-  color:var(--color-text);
-  font-size: 20px;
   padding: 10px 25px;
-  border-radius: 50px;
-  transition: 0.2s;
-  margin: 0.5px;
+  display: block;
+  color: var(--color-text);
+  font-size: 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
 }
 
-.nav-bar ul li a:hover{
+.nav-bar ul li a:hover {
   background-color: #333;
   color: var(--color-text);
 }
@@ -120,53 +121,52 @@ header{
   color: var(--color-text);
 }
 
-.alls-IA{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  margin:20px;
+.alls-IA {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-
-.alls-IA .card{
-  width: 260px;
-  background-color: var(--color-card);
-  padding: 20px;
-  border-radius:20px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+.alls-IA .card {
+  margin: 0 auto;
+  max-width: 350px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 15px;
+  /* background-color: var(--color-card); */
+  color: var(--color-card);
+  background-color: #222;
+  padding: 30px;
+  border-radius: 6px;
+  /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); */
 }
 
-.alls-IA .card .etiqueta{
-  background-color: #70FF8B;
+.alls-IA .card .etiqueta {
+  background-color: #333;
   width: 50px;
   border-radius: 20px;
   text-align: center;
   font-weight: 600;
-  margin-bottom: 10px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); */
 }
 
-.alls-IA .card .title-ia{
-  margin-bottom: 10px;
-}
-
-.alls-IA .card .descrip-ia{
-  margin-bottom: 15px;
-}
-
-.alls-IA .card .link a{
+.alls-IA .card .link a {
   background-color: var(--color-botones);
   color: var(--color-text);
   text-decoration: none;
   padding: 5px 35px;
   border-radius: 20px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
-.alls-IA .card .link a:hover{
-  background-color: var(--color-text);
-  color: var(--color-text-2);
-  border: 2px solid #333;
+.alls-IA .card .link a:hover {
+  background-color: #42bfb3;
 }
 
 /*pagina*/
@@ -178,16 +178,16 @@ header{
   margin: 20px;
 }
 
-.alls-web .card{
+.alls-web .card {
   width: 260px;
   background-color: var(--color-card);
   padding: 20px;
-  border-radius:20px;
+  border-radius: 20px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
-.alls-web .card .etiqueta{
-  background-color: #0A6EBD;
+.alls-web .card .etiqueta {
+  background-color: #0a6ebd;
   color: var(--color-text);
   width: 50px;
   padding: 5px;
@@ -198,28 +198,14 @@ header{
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-.alls-web .card .title-ia{
+.alls-web .card .title-ia {
   margin-bottom: 10px;
 }
 
-.alls-web .card .descrip-ia{
+.alls-web .card .descrip-ia {
   margin-bottom: 15px;
 }
 
-.alls-web .card .link a{
-  background-color: var(--color-botones);
-  color: var(--color-text);
-  text-decoration: none;
-  padding: 5px 35px;
-  border-radius: 20px;
-  transition: .3s ease;
-}
-
-.alls-IA .card .link a:hover{
-  background-color: var(--color-text);
-  color: var(--color-text-2);
-  border: 2px solid #333;
-}
 /*popup form*/
 
 /* Estilos para el popup */
@@ -258,7 +244,7 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -273,7 +259,7 @@ input[type="submit"] {
   left: 50%;
   font-size: 20px;
   transform: translateX(-50%);
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -290,8 +276,8 @@ input[type="submit"] {
   outline: none;
 }
 
-.actions{
-  margin:15px 0 0;
+.actions {
+  margin: 15px 0 0;
 }
 .edit-button {
   background-color: var(--color-botones); /* Color de fondo */
@@ -322,8 +308,6 @@ input[type="submit"] {
   background-color: #cc0000;
 }
 
-
-
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -346,7 +330,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -359,29 +343,26 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-
-
-
 /*avatares*/
 
-footer{
+footer {
   background: #333;
   padding: 10px;
 }
 
-footer .dchaot{
+footer .dchaot {
   text-align: center;
   color: var(--color-text);
   font-size: 10px;
   margin-bottom: 5px;
 }
 
-footer .autor{
+footer .autor {
   text-align: center;
   color: var(--color-text);
   font-size: 10px;
 }
-  
+
 /*footer .avatares{
   display: flex;
   padding-left: 2rem;
@@ -419,42 +400,41 @@ footer .avatares img {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #loading-overlay.hidden {
   display: none;
 }
 
-
-
-@media only screen  and (max-width: 1320px) {
-  header{
+@media only screen and (max-width: 1320px) {
+  header {
     padding: 0 50px;
     position: fixed;
-    top:0;
+    top: 0;
   }
-  
-
 }
 
 @media only screen and (max-width: 1100px) {
   header {
     padding: 0 10px;
     position: fixed;
-    top:0;
+    top: 0;
   }
-  
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   #comment-form {
     max-width: 3500px;
     margin: 0 auto;
     margin-left: 35px;
   }
-  
+
   #comment-form input,
   #comment-form textarea {
     width: 80%;
@@ -463,40 +443,36 @@ footer .avatares img {
     border-radius: 5px;
     margin-bottom: 10px;
   }
-  
+
   #comment-form textarea {
     height: 100px;
   }
-  
+
   #comment-form button {
     width: 60%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 50px;
   }
-  
-  
 }
 
 @media only screen and (max-width: 900px) {
-
-  
- .hamburger {
-   margin: 30px;
+  .hamburger {
+    margin: 30px;
     display: block;
     cursor: pointer;
   }
-  .hamburger .line{
+  .hamburger .line {
     width: 30px;
     height: 3px;
     background: #fefefe;
     margin: 6px 0;
   }
-  .nav-bar{
+  .nav-bar {
     height: 0px;
     position: absolute;
     top: 80px;
@@ -507,16 +483,16 @@ footer .avatares img {
     transition: 0.2;
     overflow: hidden;
   }
-  
-  .nav-bar.active{
+
+  .nav-bar.active {
     height: 400px;
   }
-  
-  .nav-bar.active ul{
+
+  .nav-bar.active ul {
     opacity: 1;
   }
-  
-  .nav-bar ul{
+
+  .nav-bar ul {
     display: block;
     width: fit-content;
     margin: 80px auto 0 auto;
@@ -524,75 +500,52 @@ footer .avatares img {
     transition: 0.5s;
     opacity: 0;
   }
-  
+
   .nav-bar ul li a {
     margin-bottom: 20px;
   }
-  
-  .separador {
-    font-weight: bold;
-    color: var(--color-text-2);
-    font-size: 20px;
-    margin-left: 9%;
-  }
-  
-  .alls-IA {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
-    margin: 10px 30px;
-  }
-  
-  .alls-IA .card{
+
+  .alls-IA .card {
     width: 80%;
   }
-  
+
   .alls-web {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     margin: 10px 30px;
   }
-  
+
   .alls-web .card {
     width: 80%;
   }
-  
+
   #comment-form {
-  max-width: 3500px;
-  margin: 0 auto;
-  margin-left: 35px;
-}
+    max-width: 3500px;
+    margin: 0 auto;
+    margin-left: 35px;
+  }
 
-#comment-form input,
-#comment-form textarea {
-  width: 80%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
+  #comment-form input,
+  #comment-form textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 
-#comment-form textarea {
-  height: 100px;
-}
+  #comment-form textarea {
+    height: 100px;
+  }
 
-#comment-form button {
-  width: 60%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 50px;
+  #comment-form button {
+    width: 60%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
-
-#searchContainer {
-  margin-bottom: 10px;
-  border-radius: 4px;
-  margin-left: 20%;
-}
-
-}
-
