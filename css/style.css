@@ -25,6 +25,14 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 .header {
+  padding: 0 40px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  position: fixed;
+  top: 0;
   background-color: #222;
 }
 
@@ -67,6 +75,8 @@ body {
 }
 
 .separador {
+  display: block;
+  width: 100%;
   font-weight: bold;
   color: var(--color-text);
   font-size: 2rem;
@@ -75,19 +85,6 @@ body {
 }
 
 /*menu*/
-
-header {
-  width: 100%;
-  height: 80px;
-  background: var(--color-secundario);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-  position: fixed;
-  top: 0;
-}
-
 .logo {
   font-size: 28px;
   font-weight: bold;
@@ -99,6 +96,7 @@ header {
 }
 .nav-bar ul {
   display: flex;
+  padding: 0 45px;
   gap: 15px;
 }
 
@@ -131,7 +129,7 @@ header {
   gap: 25px;
 }
 
-.alls-IA .card {
+.card {
   margin: 0 auto;
   max-width: 350px;
   min-height: 250px;
@@ -147,7 +145,7 @@ header {
   /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); */
 }
 
-.alls-IA .card .etiqueta {
+.etiqueta {
   background-color: #333;
   width: 50px;
   border-radius: 20px;
@@ -156,7 +154,7 @@ header {
   /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); */
 }
 
-.alls-IA .card .link a {
+.link a {
   background-color: var(--color-botones);
   color: var(--color-text);
   text-decoration: none;
@@ -165,217 +163,82 @@ header {
   transition: 0.3s ease;
 }
 
-.alls-IA .card .link a:hover {
+.link a:hover {
   background-color: #42bfb3;
 }
 
 /*pagina*/
 
 .alls-web {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  margin: 20px;
-}
-
-.alls-web .card {
-  width: 260px;
-  background-color: var(--color-card);
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-}
-
-.alls-web .card .etiqueta {
-  background-color: #0a6ebd;
-  color: var(--color-text);
-  width: 50px;
-  padding: 5px;
-  border-radius: 20px;
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 10px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-}
-
-.alls-web .card .title-ia {
-  margin-bottom: 10px;
-}
-
-.alls-web .card .descrip-ia {
-  margin-bottom: 15px;
-}
-
-/*popup form*/
-
-/* Estilos para el popup */
-.popup {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 /* Estilos para centrar el formulario */
-#myForm {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
+#contacto{
+  margin: 35px auto;
+  max-width: 400px;
+  color: var(--color-text);
+  background-color: #333;
+  border-radius: 8px;
 }
-
-/* Estilos adicionales */
-label {
-  display: block;
-  margin-bottom: 5px;
+#contacto > form{
+  margin: 0 auto;
+  padding: 25px 15px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
-input[type="text"] {
-  width: 100%;
+form > textarea, form > input{
+  max-width: 350px;
   padding: 5px;
-  margin-bottom: 10px;
-}
-
-input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Estilos para el botón */
-#myButton {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  font-size: 20px;
-  transform: translateX(-50%);
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 0px;
-  cursor: pointer;
-}
-
-/* Estilos adicionales */
-#myButton:hover {
-  background-color: #45a049;
-}
-
-#myButton:focus {
+  border-radius: 6px;
+  background: none;
+  color: #ffffff;
+  border: 1px solid #444;
   outline: none;
 }
-
-.actions {
-  margin: 15px 0 0;
+form > textarea:focus, form > input:focus{
+  outline: 1px solid #6a6a6a;
 }
-.edit-button {
-  background-color: var(--color-botones); /* Color de fondo */
-  color: #fff; /* Color del texto */
-  border: none; /* Eliminar borde */
-  padding: 5px 35px; /* Espaciado interno */
-  border-radius: 20px; /* Borde redondeado */
-  cursor: pointer; /* Cambiar el cursor al pasar el ratón */
-
-  /* Efecto de sombra al pasar el ratón */
-  transition: box-shadow 0.3s ease;
-}
-
-.edit-button:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Sombra suave */
-}
-
-.delete-button {
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 35px;
-  cursor: pointer;
-}
-
-.delete-button:hover {
-  background-color: #cc0000;
-}
-
-form {
-  max-width: 400px;
+.btn-form-send{
   margin: 0 auto;
+  width: 150px;
 }
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
+.btn-form-send:hover, .btn-form-send:active{
   cursor: pointer;
-  margin-bottom: 10px;
+  background-color: #555;
 }
-
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-/*avatares*/
-
-footer {
-  background: #333;
-  padding: 10px;
-}
-
-footer .dchaot {
-  text-align: center;
-  color: var(--color-text);
-  font-size: 10px;
-  margin-bottom: 5px;
-}
-
-footer .autor {
-  text-align: center;
-  color: var(--color-text);
-  font-size: 10px;
-}
-
-/*footer .avatares{
+.footer{
+  min-height: 80px;
   display: flex;
-  padding-left: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #222;
 }
-
-footer .avatares img {
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  border: 2px solid #fff;
-  margin: 0 0 0 -1.5em;
-}*/
-
+.container-footer{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.container-footer-box{
+  padding: 25px;
+}
+.container-footer-box > *{
+  display: block;
+}
+.footer > small{
+  margin: 15px 0;
+}
 /*carga*/
 #loading-overlay {
   position: fixed;
@@ -399,6 +262,15 @@ footer .avatares img {
   animation: spin 2s linear infinite;
 }
 
+.link-error420{
+  display: inline-block;
+  color: var(--color-text);
+  font-size: small;
+}
+.link-error420:hover, .link-error420:active{
+  color: #16e9d0;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -410,54 +282,6 @@ footer .avatares img {
 
 #loading-overlay.hidden {
   display: none;
-}
-
-@media only screen and (max-width: 1320px) {
-  header {
-    padding: 0 50px;
-    position: fixed;
-    top: 0;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  header {
-    padding: 0 10px;
-    position: fixed;
-    top: 0;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  #comment-form {
-    max-width: 3500px;
-    margin: 0 auto;
-    margin-left: 35px;
-  }
-
-  #comment-form input,
-  #comment-form textarea {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-
-  #comment-form textarea {
-    height: 100px;
-  }
-
-  #comment-form button {
-    width: 60%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 50px;
-  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -479,7 +303,7 @@ footer .avatares img {
     left: 0;
     right: 0;
     width: 100%;
-    background: var(--color-secundario);
+    background: #333;
     transition: 0.2;
     overflow: hidden;
   }
@@ -519,33 +343,4 @@ footer .avatares img {
   .alls-web .card {
     width: 80%;
   }
-
-  #comment-form {
-    max-width: 3500px;
-    margin: 0 auto;
-    margin-left: 35px;
-  }
-
-  #comment-form input,
-  #comment-form textarea {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-
-  #comment-form textarea {
-    height: 100px;
-  }
-
-  #comment-form button {
-    width: 60%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-}
+}  

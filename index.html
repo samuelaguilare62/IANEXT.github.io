@@ -27,18 +27,18 @@
       <nav class="nav-bar">
         <ul>
           <li>
-            <a href="#ia" class="active">IAS</a>
+            <a href="#ia">IAS</a>
           </li>
           <li>
             <a href="#web">Paginas web</a>
           </li>
           <li>
-            <a href="#conctato">Conctato</a>
+            <a href="#contacto">Conctato</a>
           </li>
         </ul>
       </nav>
     </header>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * -->    
+
     <div id="searchContainer">
       <input type="text" id="searchInput" placeholder="Buscar..." autocomplete="off"/>
       <button id="searchButton">Buscar</button>
@@ -331,21 +331,6 @@
         </div>
       </div>
 
-      <!--
-   
-   
-   
-   
-   <div class="card">
-     <p class="etiqueta">IA</p>
-     <h2 class="title-ia"></h2>
-     <p class="descrip-ia"></p>
-  
-     <div class="link">
-       <a href="">Probar</a>
-     </div>
-   </div>
-   -->
     </section>
 
     <label id="web" class="separador">Paginas Web</label>
@@ -575,48 +560,40 @@
           <a href="https://webmii.com/?language=es">Probar</a>
         </div>
       </div>
-
-      <!--
-   
-   <div class="card">
-      <p class="etiqueta">Web</p>
-      <h2 class="title-ia"></h2>
-      <p class="descrip-ia"></p>
-    
-      <div class="link">
-        <a href="">Probar</a>
-      </div>
-    </div>
-    --></section>
-    <div id="conctato">
+  </section>
+    <div id="contacto">
       <form
         action="mailto:samuelaguilare90@gmail.com"
         method="POST"
         enctype="text/plain"
       >
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required /><br /><br />
-
+        <input type="text" id="nombre" name="nombre" required autocomplete="off"/>
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required /><br /><br />
-
-        <label for="mensaje">Mensaje:</label><br />
+        <input type="email" id="email" name="email" required autocomplete="off"/>
+        <label for="mensaje">Mensaje:</label>
         <textarea
           id="mensaje"
           name="mensaje"
           rows="4"
           cols="50"
           required
-        ></textarea
-        ><br /><br />
-
-        <input type="submit" value="Enviar" />
+        ></textarea>
+        <input type="submit" value="Enviar" class="btn-form-send"/>
       </form>
     </div>
-    <footer>
-      <p class="dchaot">&copy; 2023 IANEXTS. Todos los derechos reservados.</p>
-
-      <p class="autor">Autor: Samuel Aguilar</p>
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="container-footer-box">
+          <strong>Autor :</strong>
+          <small>Samuel Aguilar</small>
+        </div>
+        <div class="container-footer-box">
+          <strong>Colaboradores :</strong>
+          <a href="https://www.facebook.com/profile.php?id=100087881793975" class="link-error420" target="_blank">Error420</a>
+        </div>
+      </div>
+      <small>&copy; 2023 IANEXTS. Todos los derechos reservados.</small>
     </footer>
 
     <!-- kit fontawsome -->
