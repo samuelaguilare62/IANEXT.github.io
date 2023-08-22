@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: url('assets/fondo.jpeg') no-repeat center center fixed;
+  background: url('/assets/fondo.jpeg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   font-family: "Quicksand", sans-serif;
@@ -174,7 +174,7 @@ header::before {
   /* background-color: var(--color-card); */
   color: var(--color-card);
   /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); */
-    background-image: url('assets/pngwing.com.png'); /* Ruta a tu imagen de marco */
+    background-image: url('/assets/pngwing.com.png'); /* Ruta a tu imagen de marco */
     background-position: center;
     padding: 20px; /* Espacio dentro del marco para el contenido de la tarjeta */
   border-radius: 10px;
